@@ -14,7 +14,6 @@
       text-align: center;
     }
 
-    /* Navbar */
     .navbar {
       background-color: #343a40;
     }
@@ -35,11 +34,6 @@
       border-color: #007bff;
     }
 
-    .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #0056b3;
-    }
-
     .btn-outline-primary {
       border-color: #007bff;
       color: #007bff;
@@ -50,16 +44,28 @@
       color: white;
     }
 
-    /* Course Cards */
     .course-card {
-      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
 
     .course-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #f9f9f9;
+      padding: 30px;
+      text-align: center;
     }
 
     .card-title {
@@ -67,72 +73,55 @@
       font-weight: bold;
     }
 
-    .card-body {
-      background-color: #f9f9f9;
-      padding: 30px;
-      text-align: center;
+    .card-text {
+      margin-bottom: 20px;
     }
 
-    .course-card .btn {
-      margin-top: 15px;
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    /* Register Form */
     .register-form {
       background-color: #f8f9fa;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
     }
 
-    .register-form input, .register-form textarea, .register-form select {
-      border-radius: 5px;
-      border: 1px solid #ced4da;
-      padding: 12px;
-      margin-bottom: 10px;
-      width: 100%;
+    .register-form input,
+    .register-form select {
+      margin-bottom: 15px;
     }
 
-    .register-form .btn {
-      background-color: #28a745;
-      border-color: #28a745;
-      width: 100%;
-    }
-
-    .register-form .btn:hover {
-      background-color: #218838;
-      border-color: #1e7e34;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #343a40;
-      color: white;
-    }
-
-    /* WhatsApp Button */
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25d366;
+      color: white;
       border-radius: 50%;
       padding: 15px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
       font-size: 24px;
-      color: white;
-      text-align: center;
-      cursor: pointer;
+      z-index: 999;
     }
 
     .whatsapp-btn:hover {
       background-color: #128c7e;
     }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">U1 Academy</a>
@@ -151,7 +140,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <h1>Welcome to U1 Academy</h1>
@@ -160,38 +149,50 @@
     </div>
   </section>
 
-  <!-- Courses Section -->
+  <!-- Courses -->
   <section class="py-5" id="courses">
     <div class="container">
       <h2 class="text-center mb-4">Our Popular Courses</h2>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card course-card">
+        <div class="col-md-4 d-flex">
+          <div class="card course-card w-100">
             <div class="card-body">
-              <h5 class="card-title">Full Stack Java</h5>
-              <p class="card-text">Become a Full Stack Java Developer with hands-on projects and real-time examples.</p>
-              <a href="#register" class="btn btn-outline-primary">Learn More</a>
-              <a href="#register" class="btn btn-primary mt-2">Register Now</a>
+              <div>
+                <h5 class="card-title">Full Stack Java</h5>
+                <p class="card-text">Become a Full Stack Java Developer with hands-on projects and real-time examples.</p>
+              </div>
+              <div class="button-group">
+                <a href="#register" class="btn btn-outline-primary">Learn More</a>
+                <a href="#register" class="btn btn-primary">Register Now</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card course-card">
+        <div class="col-md-4 d-flex">
+          <div class="card course-card w-100">
             <div class="card-body">
-              <h5 class="card-title">Java</h5>
-              <p class="card-text">Master Java programming and its ecosystem with advanced concepts and projects.</p>
-              <a href="#register" class="btn btn-outline-primary">Learn More</a>
-              <a href="#register" class="btn btn-primary mt-2">Register Now</a>
+              <div>
+                <h5 class="card-title">Java</h5>
+                <p class="card-text">Master Java programming and its ecosystem with advanced concepts and projects.</p>
+              </div>
+              <div class="button-group">
+                <a href="#register" class="btn btn-outline-primary">Learn More</a>
+                <a href="#register" class="btn btn-primary">Register Now</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card course-card">
+        <div class="col-md-4 d-flex">
+          <div class="card course-card w-100">
             <div class="card-body">
-              <h5 class="card-title">Cloud Computing</h5>
-              <p class="card-text">Learn about cloud services, infrastructure, and deployment strategies.</p>
-              <a href="#register" class="btn btn-outline-primary">Learn More</a>
-              <a href="#register" class="btn btn-primary mt-2">Register Now</a>
+              <div>
+                <h5 class="card-title">Cloud Computing</h5>
+                <p class="card-text">Learn about cloud services, infrastructure, and deployment strategies.</p>
+              </div>
+              <div class="button-group">
+                <a href="#register" class="btn btn-outline-primary">Learn More</a>
+                <a href="#register" class="btn btn-primary">Register Now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -199,17 +200,16 @@
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="py-5 bg-light" id="about">
     <div class="container">
       <h2 class="text-center mb-4">About U1 Academy</h2>
-      <img src="your-image-path.jpg" alt="U1 Academy" class="img-fluid mb-4">
       <p class="text-center">U1 Academy is committed to delivering quality training with real-time projects and industry-relevant content. Our mentors come with years of corporate experience and help learners bridge the gap between academic knowledge and industry requirements.</p>
     </div>
   </section>
 
-  <!-- Register Section -->
-  <section class="py-5 bg-light" id="register">
+  <!-- Register -->
+  <section class="py-5" id="register">
     <div class="container">
       <h2 class="text-center mb-4">Register Now</h2>
       <form class="register-form" onsubmit="return showSuccessMessage(event)">
@@ -217,7 +217,6 @@
         <input type="email" class="form-control" placeholder="Email ID" required>
         <input type="text" class="form-control" placeholder="Mobile Number" required>
 
-        <!-- Course Dropdown -->
         <select class="form-control" required>
           <option value="">Select a Course</option>
           <option value="python">Python</option>
@@ -228,34 +227,32 @@
           <option value="automation_testing">Automation Testing</option>
         </select>
 
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-success">Register</button>
       </form>
 
-      <!-- Success Message -->
-      <div id="successMessage" class="alert alert-success mt-4" style="display:none;">
+      <div id="successMessage" class="alert alert-success mt-4 text-center" style="display:none;">
         U1 Academy will contact you soon.
       </div>
     </div>
   </section>
 
-  <!-- WhatsApp Button -->
+  <!-- WhatsApp -->
   <a href="https://wa.me/8885811101?text=Welcome%20to%20U1%20Academy.%20We%20will%20respond%20shortly." class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      <p>&copy; 2025 U1 Academy. All rights reserved.</p>
-    </div>
+  <footer class="text-center py-3">
+    <p>&copy; 2025 U1 Academy. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script>
     function showSuccessMessage(event) {
-      event.preventDefault(); // Prevent form submission
-      document.getElementById('successMessage').style.display = 'block'; // Show success message
+      event.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
       return false;
     }
   </script>
