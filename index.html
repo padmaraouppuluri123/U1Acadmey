@@ -8,11 +8,10 @@
   <style>
     /* Hero Section */
     .hero {
-      background: url('https://source.unsplash.com/1600x500/?education,technology') no-repeat center center/cover;
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
       color: white;
       padding: 100px 0;
       text-align: center;
-      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); /* Darkens background */
     }
 
     /* Navbar */
@@ -20,8 +19,14 @@
       background-color: #343a40;
     }
 
-    .navbar-brand img {
-      width: 150px;
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar-brand:hover {
+      color: #ccc;
     }
 
     /* Button Styles */
@@ -111,7 +116,7 @@
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="your-logo-path.png" alt="U1 Academy Logo"></a>
+      <a class="navbar-brand" href="#">U1 Academy</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -171,7 +176,6 @@
             </div>
           </div>
         </div>
-        <!-- More courses can be added here similarly -->
       </div>
     </div>
   </section>
@@ -180,6 +184,7 @@
   <section class="py-5 bg-light" id="about">
     <div class="container">
       <h2 class="text-center mb-4">About U1 Academy</h2>
+      <img src="your-image-path.jpg" alt="U1 Academy" class="img-fluid mb-4">
       <p class="text-center">U1 Academy is committed to delivering quality training with real-time projects and industry-relevant content. Our mentors come with years of corporate experience and help learners bridge the gap between academic knowledge and industry requirements.</p>
     </div>
   </section>
